@@ -1,0 +1,108 @@
+#include<iostream>
+#include<Windows.h>
+using namespace std;
+int heath = 250;
+string inventory[13];
+
+int main() {
+	int room = 1;
+	for (int i = 0; i < 13; i++)
+		inventory[i] = "";
+
+	char input = 'a';
+	while (input != 'q') {
+		switch (room) {
+		case 1:
+			cout << "You wake up, The golden gleam of the afternoon sun sweeps over your body. \nLooking around you find yourself laying on a stack of hay in a warm room. \nThe walls are made of a rich, oak wood and the floor is covered in soft dirt. \nGetting up, you see a door to the (North.)" << endl;
+			cin >> input;
+			if (input == 'N')
+				room = 2;
+			break;
+		
+	
+		case 2:
+			cout << "You leave the room through the door. Finding yourself in a large, cozy wooden cabin with dirt covering the floor. \nLooking to the West, you see a well lit Fireplace, warming the entire house. A pot is heating up above the flames and a wondrous aroma emanating from it. \nTo the North, You see a massive table, Much too big for you, You swear that you can see something glinting on it. \nTo the East, You can see a small kitchen and what looks like the front door." << endl;
+			cin >> input;
+			if (input == 'E')
+				room = 5;
+			if (input == 'N')
+				room = 4;
+			if (input == 'W')
+				room = 3;
+			break;
+		
+		case 3:
+			cout << "You walk over to the fireplace, the smell of stew stems silently from the pot. \nThere's a laddle hanging on the same iron rod as the pot. You can walk back to the middle of the hut that's east of where you are." << endl;
+			cin >> input;
+			if (input == 'E')
+				room = 2;
+			break;
+		case 4:
+			cout << "You walk over to the wooden table, It's taller than you by a good margin. Peering over the top, you can see a couple of plates and a large, rusted machete on the top. \nYou can walk back to the middle of the room with S" << endl;
+			cin >> input;
+			if (input == 'S')
+				room = 2;
+			if (input == 'T')
+				cout << "You struggled for a bit but you managed to grab the Machete. \nYou can't see your reflection in it's opaque, rusted and shattered blade.\nYou can walk back to the middle of the hut with South" << endl;
+				inventory[0];
+				cin >> input;
+			if (input == 'S')
+				room = 2;
+			break;
+		case 5:
+			cout << "You walk over to the small kitchen, Looking around you find the usual, \nSome vegetables lying on a cutting board, \nA bunch of garlic hanging off one of the cabinets, \nSome cutlery and a large meat bun cooling in the window sill. \nIt's pretty big but you could probably take it with you." << endl;
+			cin >> input;
+			if (input == 'T')
+				cout << "You struggle to lift the Large Meat Bun, It feels like it weighs about a hundred pounds, \nYou eventually just give up, take one of the knives and cut yourself a small piece, \nThe warm and well cooked beef inside oozed a tiny bit of juice as you cut it." << endl;
+				inventory[2];
+			if (input == 'E')
+				room = 6;
+			break;
+		case 6:
+			cout << "You push open the large dark oak door. After struggling to push it open, the door finally frees itself from the dirt and swings wide open. You raise your arm to shield your eye from the initial sunlight. \nOnce you lower it you get a good glimpse of the outside. It's late in the afternoon, the sky is a beautiful orange, the tree's leaves are golden and red. \nThe grass is clean and well kept, in stark contrast to the state of the cabin behind you, You look back and see the full cabin. A beautiful Birch wood cabin with dark windows. \nLooking around you can see a large wooden washtub, A large wooden stump and what could be a shed in the distance. \n\nYou can go back inside with W,\n\nYou can check out the shed with E. \n\nYou can travel down the road with S." << endl;
+			cin >> input;
+			if (input == 'W')
+				room = 5;
+			if (input == 'E')
+				room = 7;
+			if (input == 'S')
+				room = 8;
+			break;
+		case 7:
+			cout << "You walk over to the shed, The wooden walls are peeling and cracking with age. \nThe door has a simple iron handle, \nYou pull the door open, peering inside, you don't see much. \nThere's a small bench and a couple of tools but not much. \nLooking at the bench, you notic that there's something being covered by a rag. \nPulling the rag off, you reveal the head of a Halberd, lying on the cold wood. \n\nYou can take the Halberd with T. \n\nYou can back away with W." << endl;
+				cin >> input;
+			if (input == 'T');
+				cout << "You placed your hands firmly on the splintered shaft of the halberd. \nThere's a lot of rust damage, but the blade is sharp and shiny, as if it was sharpened recently. \nYou lift the hefty blade off the bench and store it on your satchel." << endl;
+			if (input == 'W')
+				room = 6;
+			break;
+		case 8:
+			cout << "Walking down the road, you find yourself at a split in the path. \nThe path south ends as you reach the tree's that line the massive stone wall, to the West you can see something vaugely humanoid, it's large but it hasn't seen you. \n\nTo the east, the path gets smaller and darker but it gets closer to the giant stone wall in front of you." << endl;
+			cin >> input;
+			if (input == 'E')
+				room = 9;
+			if (input == 'W')
+				room = 10;
+			break;
+		case 9:
+			cout << "You walk down the darker path, the canopy stops all sunlight from reaching the floor, \nYou can see the glow of light blue flourecent mushrooms along the floor. \nAs you keep going, you find an opening to the south that's blocked off by a wall of thick vines, \nlooking past them you can see a ladder that goes over the stone wall. Maybe you could get unto Untrengrad that way." << endl;
+			cin >> input;
+			if (input == 'W')
+				room = 8;
+			break;
+		case 10:
+			cout << "You start trying your best to muster up some courage as you approach the strange figure. \nAs you get close, you can see their large grayish cloack that covers their whole body, \nAs you try to walk by, a weary voice rings out from the figure \"Glad to see you've woken up.\" He says. \nYou stop dead in your tracks, The figure turns around, revealing himself to be a werewolf underneath the cloak. \n\nHe looked at you, his eyes looked soulless and tired which contrasted heavily with the calm expression on his face. \nAlongside that, the werewolf had a metal plate with bolts along the lower half seemingly attached to his lower jaw. \"So, How're you feeling? any chill's? fever?\" He spoke, You didn’t expect it to be able to talk. \nWhenever he spoke, the metal plate that covered his mouth moved ever so slightly. \n\n\n Questions: \n \"Who are you?\" (1). \n \"Where are we?\" (2)." << endl;
+			cin >> input;
+			if (input == '1')
+				cout << " \"My name ain't important... You health is what should matter, So, d'you feel anything? \" He deflects. \nYou feel yourself quickly, you feel fine. But more questions pop up in your head." << endl;
+			if (input == '2')
+				cout << " \"We're near Untrengrad. This path leads down to the entrance.\" He responds, his voice sounding dry, He points over towards West, \n\"If you're looking to get into town, the entrance is that way.\" He finishes." << endl;
+				cout << "\n\n\n\n\n\n\n\END OF DEMO FOR NOW DEAR GOD THIS WAS HARD." << endl;
+			break;
+
+
+		}//end switch
+
+
+	}//end game loop
+}//end main
