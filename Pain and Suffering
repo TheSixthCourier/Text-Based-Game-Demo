@@ -5,8 +5,6 @@ using namespace std;
 int heath = 250;
 
 
-
-
 string inventory[13];
 
 int main() {
@@ -14,6 +12,30 @@ int main() {
 	for (int i = 0; i < 13; i++)
 		inventory[i] = "none";
 	char input = 'a';
+
+	int DocActions(); {
+		int DocAction = rand() % 100;
+		if (DocAction < 5) {
+			cout << "Test 1" << endl;
+
+		}
+		else if (DocAction < 35) {
+			cout << "Test 2" << endl;
+
+		}
+		else if (DocAction < 75) {
+			cout << "test 3" << endl;
+
+		}
+		else if (DocAction < 90) {
+			cout << "Test 4" << endl;
+
+		}
+		else {
+			cout << "Test 5" << endl;
+
+		}
+	}
 	
 	//Intro
 	cout << "It's cold. Nighttime fell sooner than you expected. You're running through the Forest, desperately trying to get back home." << endl;
@@ -274,28 +296,18 @@ int main() {
 			break;
 
 		case 70: //Randomizer for anything (interactions, Idle standings, Locations, etc.)
-			
-			int num = rand() % 100;
-			if (num < 5) {
-				cout << "" << endl;
-
-			}
-			else if (num < 35) {
-				cout << "" << endl;
-
-			}
-			else if (num < 75) {
-				cout << "" << endl;
-
-			}
-			else if (num < 90) {
-				cout << "" << endl;
-
-			}
-			else {
-				cout << "" << endl;
-
-			}
+			cout << "You stop in front of Doc's house. " << endl;
+			void DocAction();
+			cout << "\nYou can walk up and talk with Doc with I." << endl;
+			cout << "\nYou can walk back inside Doc's house with E." << endl;
+			cout << "\nYou can Head down the road with S." << endl;
+			cin >> input;
+			if (input == 'E')
+				room = 5;
+			if (input == 'S')
+				room = 53;
+			if (input == 'I')
+				room = 120; //Phantom room
 			break;
 
 		}//end switch
