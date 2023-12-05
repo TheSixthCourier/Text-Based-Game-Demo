@@ -15,8 +15,9 @@ int main() {
 		inventory[i] = "none";
 	char input = 'a';
 	
-	
-	cout << "You're running through the Forest, desperately trying to get back home, The thunderstorm is ripping through the land with anger and strife as gallons of rain slam into everything." << endl;
+	//Intro
+	cout << "It's cold. Nighttime fell sooner than you expected. You're running through the Forest, desperately trying to get back home." << endl;
+	cout << "The thunderstorm is ripping through the land with angerand strife as gallons of rain slam into everything." << endl;
 	cout << "The heavy raindrops pierce through your clothes, Freezing you to the very bone." << endl;
 	cout << "As you sprint underneath the dense canopy of the weeping willows, you start to feel as if you are about to faint." << endl;
 	cout << "You try your best to stay balanced but the rain gets to you, you trip on a large rootand fall flat on your back, right onto the wet grassand mud. Staring up, you can see the trees and the dark clouds blotting out the night sky." << endl;
@@ -25,7 +26,7 @@ int main() {
 	cout << "\n\n" << endl;
 	while (input != 'Q') {
 		switch (room) {
-		case 1:
+		case 1: //rooms
 			cout << "You wake up to the golden gleam of the afternoon sun beaming into the room, You're laying on a large hay stack that's a lot bigger than you, there's a blanket covering your body and a rather comfortable pillow against your head." << endl;
 			cout << "You get out of the hay bed. You're wearing some basic clothing that doesn’t feel like it's yours.\nStanding up, you feel the warm tickling sensation of grass against your foot.\nYou look at the floor and see that it's covered in grass." << endl;
 			cout << "You also see that your left foot is gone, instead there's a bandaged stump with a metal running blade in it's place." << endl;
@@ -40,7 +41,7 @@ int main() {
 				room = 50;
 			cout << endl;
 			break;
-		case 50:
+		case 50: //Phantom Room (Lv. 1) made for story purpouses and cleaner transitions.
 			cout << "You go over to the cabinet and search through the drawers. You find a couple sets of clothing that are too large for you.\nOther than that, there isn't anything of worth here. (At least to you there isn't)" << endl;
 			cout << "Seeing as there's nothing left for you to hear, you turn your attention towards the door." << endl;
 			cout << "\nYou can head through the door with N." << endl;
@@ -113,7 +114,7 @@ int main() {
 				room = 51;
 			cout << endl;
 			break;
-		case 51:
+		case 51: //Phantom Room.
 			cout << "You walk back towards the middle of the cabin." << endl;
 			cout << "\nYou can head to the kitchen with E." << endl;
 			cout << "\nYou can head to the fireplace with W" << endl;
@@ -141,10 +142,10 @@ int main() {
 		case 7:
 			cout << "You walk over to the shed, The wooden walls are peeling and cracking with age. \nThe door has a simple iron handle, \nYou pull the door open, peering inside, you don't see much. \nThere's a small bench and a couple of tools but not much. \nLooking at the bench, you notice that there's something being covered by a rag. \nPulling the rag off, you reveal the head of a Halberd, lying on the cold wood. \n\nYou can take the Halberd with T. \n\nYou can back away with W." << endl;
 			cin >> input;
-			if (input == 'T')
+			if (input == 'T') //Extra options.
 				cout << "You placed your hands firmly on the splintered shaft of the halberd. There's a lot of rust damage, but the blade is sharp and shiny, as if it was sharpened recently." << endl;
 				cout << "You lift the hefty blade off the benchand store it on your satchel." << endl;
-			inventory[1] = "Broken Halberd";
+			inventory[1] = "Broken Halberd"; //Adds Item.
 			if (input == 'W')
 				room = 52;
 			cout << endl;
@@ -167,7 +168,7 @@ int main() {
 			cin >> input;
 			if (input == 'W')
 				room = 8;
-			if (input == 'S') {
+			if (input == 'S') { //Item requirement Function..
 				if (inventory[0] == "Rusted Machete")
 					cout << "You draw the Rusted Machete from your belt and start trying to cut at the vines. You hack and slash but aren't doign much to the thick vines." << endl;
 					cout << "You look at the blade to see that it's dull, searching around you find a small rock and begin to try to sharpen the Machete with it." << endl;
@@ -186,7 +187,7 @@ int main() {
 			if (input == '1')
 				room = 100;
 			cout << "\"My name ain't important... What matters is your health. So, do you feel anything? \" He deflects.\nYou feel yourself quickly, you feel fine. But more questions pop up in your head." << endl; {
-		case 100:
+		case 100: //Phantom Room (Lv. 2)
 			cout << "\nQuestions: " << endl;
 			cout << "(1) \"What do you mean?\"" << endl;
 			cout << "(2) \"I still feel some chills\" [Lie]" << endl;
@@ -230,7 +231,7 @@ int main() {
 				room = 11;
 			break;
 
-		case 110:
+		case 110: //Phantom Room (Lv. 3)
 			cout << "You look back at him, some questions pop up in your head." << endl;
 			cout << "\nQuestions: " << endl;
 			cout << "(1) \"Do you live in Verdammt?\"" << endl;
@@ -250,13 +251,13 @@ int main() {
 			cout << "" << endl;
 
 			if (input == 'B') {
-				if (inventory[1] == "Broken Halberd")
+				if (inventory[1] == "Broken Halberd") //Item requirement
 					cout << "You pull the large Iron head of the halberd from your satchel. Placing both hands firmly on whatever remains of its broken shaft." << endl;
 					cout << "You swing it at the rotting fence, cleaving through the old wood with ease. After a couple more swings, you cleared up enough of the fence to pass through." << endl;
 				room = 12;
 				break;
 			}
-			if (inventory[1] != "Broken Halberd")
+			if (inventory[1] != "Broken Halberd") //Deny usage/passage if user doesn't have the right item.
 			cout << "You don't have anything that can break the Fence." << endl;
 			
 			break;
@@ -269,6 +270,32 @@ int main() {
 		
 		case 13:
 
+
+			break;
+
+		case 70: //Randomizer for anything (interactions, Idle standings, Locations, etc.)
+			
+			int num = rand() % 100;
+			if (num < 5) {
+				cout << "" << endl;
+
+			}
+			else if (num < 35) {
+				cout << "" << endl;
+
+			}
+			else if (num < 75) {
+				cout << "" << endl;
+
+			}
+			else if (num < 90) {
+				cout << "" << endl;
+
+			}
+			else {
+				cout << "" << endl;
+
+			}
 			break;
 
 		}//end switch
