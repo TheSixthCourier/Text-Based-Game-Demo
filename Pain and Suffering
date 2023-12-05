@@ -107,7 +107,7 @@ int main() {
 				cout << "You struggle to lift the Large Meat Bun, It feels like it weighs about a hundred pounds. " << endl;
 				cout << "You eventually just give up, take one of the nearby knives and cut yourself a small piece, The warm and well cooked beef inside oozed a tiny bit of juice as you cut it." << endl;
 				inventory[2] = "Heavy Slice of Meat Pie";
-			cout << endl;
+			break;
 			if (input == 'E')
 				room = 6;
 			if (input == 'N')
