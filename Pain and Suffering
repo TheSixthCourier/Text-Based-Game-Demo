@@ -76,7 +76,7 @@ int main() {
 			cout << "\nYou can walk back to the middle of the cabin with E." << endl;
 			cin >> input;
 			if (input == 'E')
-				room = 2;
+				room = 51;
 			cout << endl;
 			break;
 		case 4:
