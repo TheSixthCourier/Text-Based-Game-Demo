@@ -41,7 +41,7 @@ int main() {
 			break;
 		case 50: //Phantom Room (Lv. 1) made for story purpouses and cleaner transitions.
 			cout << "You go over to the cabinet and search through the drawers. You find a couple sets of clothing that are too large for you.\nOther than that, there isn't anything of worth here. (At least to you there isn't)" << endl;
-			cout << "Seeing as there's nothing left for you to hear, you turn your attention towards the door." << endl;
+			cout << "Seeing as there's nothing left for you here, you turn your attention towards the door." << endl;
 			cout << "\nYou can head through the door with N." << endl;
 			cin >> input;
 			if (input == 'N')
@@ -86,7 +86,7 @@ int main() {
 			if (input == 'S')
 				room = 51;
 			if (input == 'T')
-				cout << "You struggled for a bit but you managed to grab the Machete. \nYou can barely see your reflection in it's opaque, rusted and shattered blade." << endl; \
+				cout << "You struggled for a bit but you managed to grab the Machete. You can barely see your reflection in it's opaque and shattered blade." << endl; \
 				inventory[0] = "Rusted Machete";
 			cout << "\nYou can walk back to the middle of the cabin with S" << endl;
 			cin >> input;
@@ -95,7 +95,8 @@ int main() {
 			cout << endl;
 			break;
 		case 5:
-			cout << "You walk over to the small kitchen, Looking around you find the usual, \nSome vegetables lying on a cutting board, \nA bunch of garlic hanging off one of the cabinets, \nSome cutlery and a large meat bun cooling in the window sill. \nIt's pretty big but you could probably take it with you." << endl;
+			cout << "You walk over to the small kitchen, Looking around you find the usual. Some vegetables lying on a cutting board, A bunch of garlic hanging off one of the cabinets," << endl;
+			cout << "Some cutlery and a large meat bun cooling in the window sill. It's pretty big but you could probably take it with you." << endl;
 			cout << "You can see what looks like a large dark oak door to the East," << endl;
 			cout << "\nYou can head back to the middle of the room with W." << endl;
 			cout << "\nYou can head through the big oak door with E." << endl;
@@ -106,7 +107,7 @@ int main() {
 				room = 51;
 			cout << endl;
 			break;
-		case 51: //Phantom Room.
+		case 51: //Phantom Room Lv.1.
 			cout << "You walk back towards the middle of the cabin." << endl;
 			cout << "\nYou can head to the kitchen with E." << endl;
 			cout << "\nYou can head to the fireplace with W" << endl;
@@ -121,7 +122,14 @@ int main() {
 			cout << endl;
 			break;
 		case 6:
-			cout << "You push open the large dark oak door. After struggling to push it open, the door finally frees itself from the dirt and swings wide open. You raise your arm to shield your eye from the initial sunlight. \nOnce you lower it you get a good glimpse of the outside. It's late in the afternoon, the sky is a beautiful orange, the tree's leaves are golden and red. \nThe grass is clean and well kept, in stark contrast to the state of the cabin behind you, You look back and see the full cabin. A beautiful Birch wood cabin with dark windows. \nLooking around you can see a large wooden washtub, A large wooden stump and what could be a shed in the distance. \n\nYou can go back inside with W,\n\nYou can check out the shed with E. \n\nYou can travel down the road with S." << endl;
+			cout << "You push open the large dark oak door. After struggling to push it open, the door finally frees itself from the dirt and swings wide open." << endl;
+			cout << "You raise your arm to shield your eye from the initial sunlight. Once you lower it you get a good glimpse of the outside." << endl;
+			cout << "It's late in the afternoon, the sky is a beautiful orange, the tree's leaves are golden and red." << endl;
+			cout << "The grass is cleanand well kept, in stark contrast to the state of the cabin behind you, You look behind you to get a view of the place you were in." << endl;
+			cout << "A beautiful Birch wood cabin with dark windows. Looking around you can see a large wooden washtub, A large wooden stump and what could be a shed in the distance." << endl;
+			cout << "\nYou can go back inside with W." << endl;
+			cout << "\nYou can check out the shed with E." << endl;
+			cout << "\nYou can travel down the road with S." << endl;
 			cin >> input;
 			if (input == 'W')
 				room = 5;
@@ -132,7 +140,11 @@ int main() {
 			cout << endl;
 			break;
 		case 7:
-			cout << "You walk over to the shed, The wooden walls are peeling and cracking with age. \nThe door has a simple iron handle, \nYou pull the door open, peering inside, you don't see much. \nThere's a small bench and a couple of tools but not much. \nLooking at the bench, you notice that there's something being covered by a rag. \nPulling the rag off, you reveal the head of a Halberd, lying on the cold wood. \n\nYou can take the Halberd with T. \n\nYou can back away with W." << endl;
+			cout << "You walk over to the shed, The wooden walls are peeling and cracking with age. The door has a simple iron handle." << endl;
+			cout << "You pull the door open, peering inside, you don't see much. There's a small bench and a couple of tools but not much." << endl;
+			cout << "Looking at the bench, you notice that there's something being covered by a rag. Pulling the rag off, you reveal the head of a Halberd, lying still on the cold wood.\n" << endl;
+			cout << "\nYou can take the Halberd with T." << endl;
+			cout << "\nYou can back away with W." << endl;
 			cin >> input;
 			if (input == 'T') //Extra options.
 				cout << "You placed your hands firmly on the splintered shaft of the halberd. There's a lot of rust damage, but the blade is sharp and shiny, as if it was sharpened recently." << endl;
@@ -143,7 +155,11 @@ int main() {
 			cout << endl;
 			break;
 		case 8:
-			cout << "Walking down the road, you find yourself at a split in the path. \nThe path south ends as you reach the trees that line the massive stone wall, to the West you can see something vaguely humanoid, it's large but it hasn't seen you. \n\nTo the east, the path gets smaller and darker but it gets closer to the giant stone wall in front of you." << endl;
+			cout << "Walking down the road, you find yourself at a split in the path. The path south ends as you reach the trees that line the massive stone wall." << endl;
+			cout << "To the West you can see something vaguely humanoid, it's large but it hasn't seen you." << endl;
+			cout << "To the east, the path gets smallerand darker but it gets closer to the giant stone wall in front of you." << endl;
+			cout << "\nYou can walk over towards the Humanoid with W." << endl;
+			cout << "\nYou can head into the forest with E." << endl;
 			cin >> input;
 			if (input == 'E')
 				room = 9;
@@ -163,10 +179,10 @@ int main() {
 			if (input == 'S') { //Item requirement Function..
 				if (inventory[0] == "Rusted Machete")
 					cout << "You draw the Rusted Machete from your belt and start trying to cut at the vines. You hack and slash but aren't doing much to the thick vines." << endl;
-				cout << "You look at the blade to see that it's dull, searching around you find a small rock and begin to try to sharpen the Machete with it." << endl;
-				cout << "After what felt like half an hour you manage to sharpen the blade to the point that it's bright and reflective." << endl;
-				cout << "You get back up and then begin to cut at the vines, this time the Machete cleaves through them with ease." << endl;
-				cout << "After clearing the vines, you see what looks like a ladder up ahead, It goes up towards the top of the Wall. Maybe you can get into Verdammt this way." << endl;
+					cout << "You look at the blade to see that it's dull, searching around you find a small rock and begin to try to sharpen the Machete with it." << endl;
+					cout << "After what felt like half an hour you manage to sharpen the blade to the point that it's bright and reflective." << endl;
+					cout << "You get back up and then begin to cut at the vines, this time the Machete cleaves through them with ease." << endl;
+					cout << "After clearing the vines, you see what looks like a ladder up ahead, It goes up towards the top of the Wall. Maybe you can get into Verdammt this way." << endl;
 				room = 60;
 				break;
 			}
@@ -182,7 +198,7 @@ int main() {
 			cin >> input;
 			if (input == '1')
 				room = 100;
-		case 100: //Phantom Room (Lv. 2)
+		case 100: //Phantom Room Lv. 2 (Dialouge)
 			cout << "\"My name ain't important... What matters is your health. So, do you feel anything? \" He deflects. You feel yourself quickly, you feel fine. But more questions pop up in your head." << endl; {
 			cout << "\nQuestions: " << endl;
 			cout << "(1) \"What do you mean?\"" << endl;
@@ -203,10 +219,13 @@ int main() {
 			cout << "The first is a brownish, pasty pill," << endl;
 			cout << "The second is a small bottle with a glowing orange liquid inside of it." << endl;
 			cout << "And the third is a small flower laced with what looks like powered snow." << endl;
-
+			cout << "You thank him for the medicine. Henods in response. He then raises an arm out and points down the road." << endl;
+			cout << "\"Well, YOu probably want to go now, That way leads towards Verdammt.. If you ever need a place to staythe night, you're always welcome to stay with me.\" He said, He lowers his arm and heads back towards the Cabin." << endl;
+			room = 54;
 			break;
 		case 101:
-			cout << "\"Ah, well I should probably bring you up to speed. I found you during a rather awful thunderstorm,\nYou were out cold, starting to catch a case of hypothermia and your heartbeat was weak.\nI brought you to safety and as a man of medicine I care for the health of others.\nSo I did my best to try to save you.\" He finished, The metal plated on his mouth creaked with every vowel. " << endl;
+			cout << "\"Ah, well I should probably bring you up to speed. I found you during a rather awful thunderstorm,\nYou were out cold, starting to catch a case of hypothermia and your heartbeat was weak.\nI brought you to safety and as a man of medicine I care for the health of others.\nSo I did my best to try to save you.\" " << endl;
+			cout << "He finished, The metal plated on his mouth creaked with every vowel. " << endl;
 			cout << "More questions just pop up in your head. You don't remember any thunderstorm. or... anything before waking up." << endl;
 			cout << "\nQuestions: " << endl;
 			cout << "(1) What happened to my leg?" << endl;
@@ -222,7 +241,8 @@ int main() {
 			cout << "He lifts one arm out from under his cloak and rubs the back of his neck in what looks like shame. His fingers are bandaged up for some odd reason." << endl;
 			cout << "\"Ah.. your leg... Well... When I found you, it had gotten a couple of infections. along with the cold of the rain giving it frostbite. I tried my best to save your leg but in the end I had to amputate it.. I'm sorry..\" He said." << endl;
 			cout << "You look at the steel blade attached to your calf. While you never thought you'd lose a limb, You're at least glad that he didn't leave you unable to walk." << endl;
-			cout << "\"Anyways.. I can probably guess that you want to get going by now, Here. Take some Brass, If you ever go to the bakery, tell Haral that Doc said hi..\" \nHe then hands you a small pile of what looks like bullet casings. The casings are empty and have a tiny bit of rust on them." << endl;
+			cout << "\"Anyways.. I can probably guess that you want to get going by now, Here. Take some Brass, If you ever go to the bakery, tell Haral that Doc said hi..\" " << endl;
+			cout << "He then hands you a small pile of what looks like bullet casings.The casings are empty and have a tiny bit of rust on them." << endl;
 			cout << "As you turn back to thank him, he's vanished. Looking around you see him heading back towards the cabin. His upper body is fully hidden by his cloak." << endl;
 			cout << "You look back at the road, Up ahead there's a fork in the path. One path leads up into the forest and maybe around the cabin." << endl;
 			cout << "The other path leads around towards what could be the entrance into Verdammt.\n" << endl;
@@ -238,7 +258,7 @@ int main() {
 				room = 11;
 			break;
 
-		case 111: //Phantom Room (Lv. 3)
+		case 111: //Phantom Room Lv.2.
 			cout << "\"We're near Verdammt. This path leads down to the entrance.\" He responds, his voice sounding dry, He points over towards West, \n\"If you're looking to get into town, the entrance is that way.\" He finishes." << endl;
 			cout << "He points towards the massive stone walls that are to your left. The old stones stacked up high to keep threats out of the small town." << endl;
 			cout << "You look back at him, some questions pop up in your head." << endl;
@@ -288,8 +308,18 @@ int main() {
 				room = 54;
 
 			break;
+		case 52:
+			cout << "You walk back towards the middle of the road in front of the cabin.\n" << endl;
+			cout << "You can walk back into the cabin with W." << endl;
+			cout << "You can walk down the road with S" << endl;
+			cin >> input;
+			if (input == 'W')
+				room = 5;
+			if (input == 'S')
+				room = 8;
+			break;
 		case 54:
-			cout << "You walk down the road. Doc's House lies north of where you stand." << endl;
+			cout << "You find youself in the middle of the road. Doc's House lies north of where you stand." << endl;
 			cout << "You can continue towards the split in the path with E." << endl;
 			cout << "You can head towards the Entrance to Verdammt with S." << endl;
 			cout << "You can head towards the other path with W." << endl;
@@ -319,23 +349,23 @@ int main() {
 			cout << "You stop in front of Doc's house. The wind calmly blowing leaves off of the nearby trees." << endl;
 			int DocActions(); {
 				int DocAction = rand() % 12;
-				if (DocAction < 2) {
+				if (DocAction < 0) {
 					cout << "Doc's staring at the forest, he seemed to be zoning out." << endl;
 
 				}
-				else if (DocAction < 4) {
-					cout << "Doc's cleaning some dirty rags in the large washtub. The water's a bit murky adn theirs a small tinge of red in there." << endl;
+				else if (DocAction < 2) {
+					cout << "Doc's cleaning some dirty rags in the large washtub. The water's a bit murky and theirs a small tinge of red in there." << endl;
 
 				}
-				else if (DocAction < 6) {
+				else if (DocAction < 4) {
 					cout << "Doc has his back faced towards you, You can sort of hear some wincing as he's doing something to his mouth." << endl;
 
 				}
-				else if (DocAction < 8) {
+				else if (DocAction < 6) {
 					cout << "Doc's pummeling something in a mortar & pestle. Maybe he's making some medicine?" << endl;
 
 				}
-				else {
+				else if (DocAction < 8){
 					cout << "Doc's sitting down on the Stump, silently watching you from afar." << endl;
 
 				}
@@ -359,4 +389,5 @@ int main() {
 // EXPLANATIONS!
 // CASES ARE THE ROOMS.
 // EACH INPUT CAN ONLY HAVE ONE LETTER FOR SOME DAMN REASON
-// DON'T ADD A PET. CAN'T ADD PET.
+// DON'T ADD PET. CAN'T ADD PET.
+// SEVERAL PHANTOM ROOMS FOR DIALOUGE AND SMOOTHER TRANSITIONS BETWEEN ROOMS.
